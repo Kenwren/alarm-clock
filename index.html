@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm Clock</title>
+    <link rel="stylesheet" href="./assets/styles/styles.css">
+    <script src="./assets/script/script.js" defer></script>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body onload="initClock()">
+    <div class="alarm">
+        <div class="datetime">
+            <div class="date">
+                <span id="dayName">Day</span>,
+                <span id="month">Month</span>,
+                <span id="dayNum">00</span>,
+                <span id="year">Year</span>
+            </div>
+            <div class="time">
+                <span id="hour">00</span>:
+                <span id="minutes">00</span>:
+                <span id="seconds">00</span>:
+                <span id="period">AM</span>
+            </div>
+            <button id="stopAlarm" onclick="stopAlarm()">Stop Alarm</button>
+        </div>
+        <hr>
+        <div class="setAlarm">
+            <div class="column">
+                <select>
+                    <option value="setHour" selected hidden>Hour</option>
+                </select>
+            </div>
+            <div class="column">
+                <select>
+                    <option value="setMinute" selected hidden>Minute</option>
+                </select>
+            </div>
+            <div class="column">
+                <select>
+                    <option value="AM/PM" selected hidden>AM/PM</option>
+                </select>
+            </div>
+            <button id="btn-setAlarm" type="submit">Set Alarm</button>
+        </div>
+        <hr>
+        <h3 id="alarm-h3"></h3>
+        <div class="alarmList">
+        </div>
+    </div>
+</body>
+</html>
